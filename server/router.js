@@ -9,5 +9,5 @@ var express = require('express')
 var app = require('./app')
 
 app.get('/', function (req, res) {
-  res.send('leedotcom!')
+  res.render('index')
 })
