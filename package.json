@@ -1,0 +1,25 @@
+{
+  "name": "leedotcom",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "server/main.js"
+  },
+  "domains": [
+    "leeolayvar.com",
+    "www.leeolayvar.com"
+  ],
+  "subdomain": "leedotcom",
+  "devDependencies": {
+    "mocha": "0.14.x",
+    "should": "0.5.x"
+  },
+  "dependencies": {
+    "express": "2.5.x",
+    "jade": "0.21.0",
+    "stylus": "0.24.0",
+    
+    "browserify": "1.x.x",
+    "jquery-browserify": "1.x.x"
+  }
+}

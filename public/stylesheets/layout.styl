@@ -1,0 +1,77 @@
+@import 'reset'
+
+display-box()
+  display -webkit-box
+  display -moz-box
+  display box
+
+box-align(alignment)
+  -webkit-box-align alignment
+  -moz-box-align alignment
+  box-align alignment
+
+box-direction(direction)
+  -webkit-box-direction direction
+  -moz-box-direction direction
+  box-direction direction
+
+box-flex(flex_value)
+  -webkit-box-flex flex_value
+  -moz-box-flex flex_value
+  box-flex flex_value
+
+box-orient(orientation)
+  -webkit-box-orient orientation
+  -moz-box-orient orientation
+  box-orient orientation
+
+// Hehe, silly goose, packment isn't a word
+box-pack(packment)
+  -webkit-box-pack: packment
+  -moz-box-pack: packment
+  box-pack: packment
+
+html, body
+  margin 0
+  padding 0
+  height 100%
+  width 100%
+
+body
+  display-box()
+  box-orient(vertical)
+
+  > header
+    margin: 0 0 3em 0
+    
+    display-box()
+    box-orient(vertical)
+    box-direction(reverse)
+    
+    h1
+      margin: 0 3em 0 0
+      display-box()
+      box-pack(center)
+
+    nav
+      margin: 3em 0 4em 0
+      display-box()
+      box-pack(end)
+    
+      ul
+        display-box()
+        box-orient(horizontal)
+        
+        li
+          margin: 0 0.6em 0 0
+
+  > section
+    margin: 0 16em 0 0
+    box-flex(1)
+    display-box()
+    box-pack(center)
+
+  > footer
+    margin: 1em 0
+    display-box()
+    box-pack(center)
