@@ -11,7 +11,6 @@ var app = require('./app')
 
 
 app.configure(function () {
-  console.log('Generic')
   app.set('views', __dirname +'/views')
   app.set('view engine', 'jade')
   
@@ -19,7 +18,6 @@ app.configure(function () {
 })
 
 app.configure('development', function () {
-  console.log('Development')
   app.set('port', process.env.PORT)
   app.set('view options', {
     'layout': false,
