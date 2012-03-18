@@ -5,7 +5,8 @@
 // @copyright 2012 by Lee Olayvar
 //
 /*jshint asi: true*/
-var express = require('express')
+var browserify = require('browserify')
+  , express = require('express')
   , stylus = require('stylus')
 var app = require('./app')
 
@@ -53,4 +54,7 @@ app.configure('production', function () {
 // content.
 app.configure(function () {
   app.use(express.static(__dirname +'/../public'))
+  app.use(browserify(__dirname + '/../client/main.js', {
+    'cache': __dirname +'/../.browserify_cache.json'
+  }))
 })
