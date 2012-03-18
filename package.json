@@ -20,8 +20,6 @@
     "stylus": "0.24.0",
     
     "browserify": "1.x.x",
-    "jquery-browserify": "1.x.x",
-    
-    "ltask": "git://github.com/leeolayvar/ltask.git#develop"
+    "jquery-browserify": "1.x.x"
   }
 }
