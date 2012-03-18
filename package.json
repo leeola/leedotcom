@@ -17,6 +17,7 @@
   "dependencies": {
     "express": "2.5.x",
     "jade": "0.21.0",
+    "stylus": "0.24.0",
     
     "browserify": "1.x.x",
     "jquery-browserify": "1.x.x",
