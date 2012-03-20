@@ -40,6 +40,13 @@ function Router(dispatcher, config) {
   this._config = default_config
 }
 
+Router.prototype._add_route = function (method, route, callback) {
+  var formatted_pattern = this._format_pattern(route)
+  if (this._routes[method] === undefined)
+    this._routes[method] = {}
+  this._routes[method][formatted_pattern] = callback
+}
+
 // (pattern) -> regex_string
 //
 // Params:
@@ -132,7 +139,7 @@ Router.prototype.dispatch = function (request) {
 // Desc:
 //  Add a route and a callback to be matched.
 Router.prototype.get = function (route, callback) {
-  this._routes['get'][this._format_pattern(route)] = callback
+  this._add_route('GET', route, callback)
 }
 
 
