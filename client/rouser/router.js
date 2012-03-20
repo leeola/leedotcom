@@ -74,8 +74,8 @@ Router.prototype._format_pattern = function (pattern) {
       
       // Check for the ending slash on domains. If it exists, replace it
       // with an optional end slash.
-      if (pattern.lastIndexOf('\\/') != pattern.length-2) {
-        pattern = pattern.substring(0, pattern.length-2) +'[\\/]?$'
+      if (pattern.lastIndexOf('\\/') == pattern.length-2) {
+        pattern = pattern.substring(0, pattern.length-2) +'[\\/]?'
       }
       // Since we have not found the user trying to add in an ending slash,
       // add our own.
