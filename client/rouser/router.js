@@ -104,10 +104,10 @@ Router.prototype._dispatch_route = function (request, routes,
   
   if (pattern_regexp.test(request.target)) {
     routes[pattern_string](request, function () {
-      self._dispatch_route(request, routes, routes_regies, index++)
+      self._dispatch_route(request, routes, routes_regies, ++index)
     })
   } else {
-    this._dispatch_route(request, routes, routes_regies, index++)
+    this._dispatch_route(request, routes, routes_regies, ++index)
   }
 }
 
@@ -126,7 +126,7 @@ Router.prototype.dispatch = function (request) {
     return undefined
   
   var route_regies = Object.keys(routes)
-  this._dispatch_url(request, routes, route_regies, 0)
+  this._dispatch_route(request, routes, route_regies, 0)
 }
 
 // (route, callback) -> undefined

@@ -35,14 +35,12 @@ function Dispatcher() {
   var tag_elements = document.getElementsByTagName('a')
   
   for (var i = 0; i < tag_elements.length; i++)
-    tag_elements[i].addEventListener('click', this._click_event, false)
+    tag_elements[i].addEventListener('click', this._click_event.bind(this), false)
   
   this.router = null
 }
 
 Dispatcher.prototype._click_event = function (event) {
-  console.log('Click event!')
-  
   event.preventDefault()
   
   var request = {
